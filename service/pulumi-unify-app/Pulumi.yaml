@@ -1,0 +1,3 @@
+name: pulumi-unify-app
+runtime: nodejs
+description: member client app

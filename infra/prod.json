@@ -1,0 +1,981 @@
+{
+    "version": 3,
+    "deployment": {
+        "manifest": {
+            "time": "2019-02-20T23:46:06.677285776+05:30",
+            "magic": "6c993fb053a6ee3f4c7c224e6d1ad637222b51d655db5305ca412c0ce17b09f3",
+            "version": "v0.16.14",
+            "plugins": [
+                {
+                    "name": "aws",
+                    "path": "/home/nanda/.pulumi/plugins/resource-aws-v0.16.8/pulumi-resource-aws",
+                    "type": "resource",
+                    "version": "0.16.8"
+                },
+                {
+                    "name": "pulumi-nodejs",
+                    "path": "/home/nanda/.pulumi/bin/pulumi-resource-pulumi-nodejs",
+                    "type": "resource",
+                    "version": "0.16.14"
+                }
+            ]
+        },
+        "resources": [
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::pulumi:pulumi:Stack::aws-kubernetes-prod",
+                "custom": false,
+                "type": "pulumi:pulumi:Stack",
+                "outputs": {
+                    "deploymentName": "unify-dev-2udqtrhl",
+                    "kubeconfig": {
+                        "apiVersion": "v1",
+                        "clusters": [
+                            {
+                                "cluster": {
+                                    "certificate-authority-data": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1ESXlNREV6TXpnMU1Gb1hEVEk1TURJeE56RXpNemcxTUZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTG00CnlkNDdYQmFwSFJNQVhLbEQwMFJFYkV3V2U4L3VCYTRqTisvdlFLakovNEd2UVFBSEo2U2ZCeVNmRHZLNGZsNkUKZGhNcXlFSThoQmtmSmN1U04vSjFVU083UCsrbWQvZDVvcEFVNG9MRDBTMHpNNHJPWlZBT25pQ2RQd2ZuYjVKVApad2oyL0RSZDF1K1U3bXkxeGJpdnBaWnZWaEZxRGZTdm5FY1FIZS9KWkErblRyYTFQWW5ZVlh6NVpWaEhVTGt2ClpGaGFmelpaYWRkVGt4c2lBOWhzMHJnT0E1SlBaTGVMN3ZSOU9xUjhYdUtSenA2UUI0YXJoTWpOaXAxejBqc2gKbUxHallYcWRJazdjKzhTYlQwNGEwYlQ3VnkxUE1iQkRCZHhGRHcvMlA0UEpvc05FTWUrc3JpT3IveFM4T1RMdApaVHMrdEdRSHIvaFBsNFJTa1ZNQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFGblpUbkNDc2hIVGRIYzlIaUU0d05Vek5ORE0KYWtySkZTVCtEc1E3OG1HK3FCTHJieWZ4RTA5L0NmMjNpZENEZFovdGdJVHk2NHYvLzRFZmNjWE53M3gxZFJqQwpSRDA2Z3pQSm4zM0RCMDZlSXJCcHVFT21CTjEzK0lrUEhZdnEySjFPR3M1RmZ5ZExxSkxWMTVPQWRkMDhQby90CjAyQ0k0aEtaZlZ4T05tUVUrQjlrVzR6aER3Z3hWTU9KKzhnc1dOcWZQSFdtdER6aGMxNGhPeTIyVnlRa0FMNzcKMTBVQXpINEpiYWJVY1gzWnZ5RVZ2ekk2b1RTZFVJNVEyMmZ3UkhkV0tTemlsaW9DaTFOWGRlaVkyekU1dUVkNAo0dlY3OHVRVDZHbG5kbEpQeWxOL203SXBqelV2aVFnQXN2VmwyZHhQQWVLNnE5V1JraWVwSDhWaVM2ND0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=",
+                                    "server": "https://943BC8AF821E34825F209C5E09EC6FDE.yl4.us-east-1.eks.amazonaws.com"
+                                },
+                                "name": "kubernetes"
+                            }
+                        ],
+                        "contexts": [
+                            {
+                                "context": {
+                                    "cluster": "kubernetes",
+                                    "user": "aws"
+                                },
+                                "name": "aws"
+                            }
+                        ],
+                        "current-context": "aws",
+                        "kind": "Config",
+                        "users": [
+                            {
+                                "name": "aws",
+                                "user": {
+                                    "exec": {
+                                        "apiVersion": "client.authentication.k8s.io/v1alpha1",
+                                        "args": [
+                                            "token",
+                                            "-i",
+                                            "unify-dev-eksCluster-a28b7c0"
+                                        ],
+                                        "command": "aws-iam-authenticator"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "serviceHostname": "a717bc08a351511e99f1202bda0a85c2-1624153980.us-east-1.elb.amazonaws.com",
+                    "serviceName": "unify-dev-5ud0evly"
+                }
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::pulumi:providers:aws::default",
+                "custom": true,
+                "id": "2e3e70b9-84b1-4824-be3b-fd4c62e79ece",
+                "type": "pulumi:providers:aws",
+                "inputs": {
+                    "region": "us-east-1",
+                    "version": "0.16.8"
+                }
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster::unify-dev",
+                "custom": false,
+                "type": "eks:index:Cluster",
+                "outputs": {
+                    "kubeconfig": {
+                        "apiVersion": "v1",
+                        "clusters": [
+                            {
+                                "cluster": {
+                                    "certificate-authority-data": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1ESXlNREV6TXpnMU1Gb1hEVEk1TURJeE56RXpNemcxTUZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTG00CnlkNDdYQmFwSFJNQVhLbEQwMFJFYkV3V2U4L3VCYTRqTisvdlFLakovNEd2UVFBSEo2U2ZCeVNmRHZLNGZsNkUKZGhNcXlFSThoQmtmSmN1U04vSjFVU083UCsrbWQvZDVvcEFVNG9MRDBTMHpNNHJPWlZBT25pQ2RQd2ZuYjVKVApad2oyL0RSZDF1K1U3bXkxeGJpdnBaWnZWaEZxRGZTdm5FY1FIZS9KWkErblRyYTFQWW5ZVlh6NVpWaEhVTGt2ClpGaGFmelpaYWRkVGt4c2lBOWhzMHJnT0E1SlBaTGVMN3ZSOU9xUjhYdUtSenA2UUI0YXJoTWpOaXAxejBqc2gKbUxHallYcWRJazdjKzhTYlQwNGEwYlQ3VnkxUE1iQkRCZHhGRHcvMlA0UEpvc05FTWUrc3JpT3IveFM4T1RMdApaVHMrdEdRSHIvaFBsNFJTa1ZNQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFGblpUbkNDc2hIVGRIYzlIaUU0d05Vek5ORE0KYWtySkZTVCtEc1E3OG1HK3FCTHJieWZ4RTA5L0NmMjNpZENEZFovdGdJVHk2NHYvLzRFZmNjWE53M3gxZFJqQwpSRDA2Z3pQSm4zM0RCMDZlSXJCcHVFT21CTjEzK0lrUEhZdnEySjFPR3M1RmZ5ZExxSkxWMTVPQWRkMDhQby90CjAyQ0k0aEtaZlZ4T05tUVUrQjlrVzR6aER3Z3hWTU9KKzhnc1dOcWZQSFdtdER6aGMxNGhPeTIyVnlRa0FMNzcKMTBVQXpINEpiYWJVY1gzWnZ5RVZ2ekk2b1RTZFVJNVEyMmZ3UkhkV0tTemlsaW9DaTFOWGRlaVkyekU1dUVkNAo0dlY3OHVRVDZHbG5kbEpQeWxOL203SXBqelV2aVFnQXN2VmwyZHhQQWVLNnE5V1JraWVwSDhWaVM2ND0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=",
+                                    "server": "https://943BC8AF821E34825F209C5E09EC6FDE.yl4.us-east-1.eks.amazonaws.com"
+                                },
+                                "name": "kubernetes"
+                            }
+                        ],
+                        "contexts": [
+                            {
+                                "context": {
+                                    "cluster": "kubernetes",
+                                    "user": "aws"
+                                },
+                                "name": "aws"
+                            }
+                        ],
+                        "current-context": "aws",
+                        "kind": "Config",
+                        "users": [
+                            {
+                                "name": "aws",
+                                "user": {
+                                    "exec": {
+                                        "apiVersion": "client.authentication.k8s.io/v1alpha1",
+                                        "args": [
+                                            "token",
+                                            "-i",
+                                            "unify-dev-eksCluster-a28b7c0"
+                                        ],
+                                        "command": "aws-iam-authenticator"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                "parent": "urn:pulumi:prod::aws-kubernetes::pulumi:pulumi:Stack::aws-kubernetes-prod"
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network::vpc",
+                "custom": false,
+                "type": "aws-infra:network:Network",
+                "parent": "urn:pulumi:prod::aws-kubernetes::pulumi:pulumi:Stack::aws-kubernetes-prod"
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole::unify-dev-instanceRole",
+                "custom": false,
+                "type": "eks:index:ServiceRole",
+                "outputs": {
+                    "role": "unify-dev-instanceRole-role-a0f50b1"
+                },
+                "parent": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster::unify-dev"
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$kubernetes:yaml:ConfigGroup::unify-dev-dashboard",
+                "custom": false,
+                "type": "kubernetes:yaml:ConfigGroup",
+                "parent": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster::unify-dev"
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole::unify-dev-eksRole",
+                "custom": false,
+                "type": "eks:index:ServiceRole",
+                "outputs": {
+                    "role": "unify-dev-eksRole-role-2d1a65b"
+                },
+                "parent": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster::unify-dev"
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::pulumi:providers:pulumi-nodejs::default",
+                "custom": true,
+                "id": "525661c6-8151-4c47-9c1b-cbc619ba6a18",
+                "type": "pulumi:providers:pulumi-nodejs"
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$pulumi-nodejs:dynamic:Resource::unify-dev-cfnStackName",
+                "custom": true,
+                "id": "unify-dev-cfnStackName",
+                "type": "pulumi-nodejs:dynamic:Resource",
+                "inputs": {
+                    "__provider": "exports.handler = __f0;\n\nvar __provider = {check: __f1, diff: __f2, create: __f3, update: __f5, read: __f6, delete: __f7};\n\nfunction __f1() {\n  return (function() {\n    with({  }) {\n\nreturn (olds, news) =\u003e Promise.resolve({ inputs: news, failedChecks: [] });\n\n    }\n  }).apply(undefined, undefined).apply(this, arguments);\n}\n\nfunction __f2() {\n  return (function() {\n    with({  }) {\n\nreturn (id, olds, news) =\u003e Promise.resolve({});\n\n    }\n  }).apply(undefined, undefined).apply(this, arguments);\n}\n\nfunction __f4() {\n  return (function() {\n    with({ crypto: require(\"crypto\") }) {\n\nreturn n =\u003e `${n}-${crypto.randomBytes(4).toString(\"hex\")}`;\n\n    }\n  }).apply(undefined, undefined).apply(this, arguments);\n}\n\nfunction __f3() {\n  return (function() {\n    with({ name: \"unify-dev-cfnStackName\", func: __f4 }) {\n\nreturn (inputs) =\u003e Promise.resolve({\n                id: name,\n                outs: { output: func(inputs.input) },\n            });\n\n    }\n  }).apply(undefined, undefined).apply(this, arguments);\n}\n\nfunction __f5() {\n  return (function() {\n    with({ func: __f4 }) {\n\nreturn (id, olds, news) =\u003e Promise.resolve({\n                outs: { output: func(news.input) },\n            });\n\n    }\n  }).apply(undefined, undefined).apply(this, arguments);\n}\n\nfunction __f6() {\n  return (function() {\n    with({  }) {\n\nreturn (id, state) =\u003e Promise.resolve({ id: id, props: state });\n\n    }\n  }).apply(undefined, undefined).apply(this, arguments);\n}\n\nfunction __f7() {\n  return (function() {\n    with({  }) {\n\nreturn (id, props) =\u003e Promise.resolve();\n\n    }\n  }).apply(undefined, undefined).apply(this, arguments);\n}\n\nfunction __f0() {\n  return (function() {\n    with({ provider: __provider }) {\n\nreturn () =\u003e provider;\n\n    }\n  }).apply(undefined, undefined).apply(this, arguments);\n}\n",
+                    "input": "unify-dev"
+                },
+                "outputs": {
+                    "__provider": "exports.handler = __f0;\n\nvar __provider = {check: __f1, diff: __f2, create: __f3, update: __f5, read: __f6, delete: __f7};\n\nfunction __f1() {\n  return (function() {\n    with({  }) {\n\nreturn (olds, news) =\u003e Promise.resolve({ inputs: news, failedChecks: [] });\n\n    }\n  }).apply(undefined, undefined).apply(this, arguments);\n}\n\nfunction __f2() {\n  return (function() {\n    with({  }) {\n\nreturn (id, olds, news) =\u003e Promise.resolve({});\n\n    }\n  }).apply(undefined, undefined).apply(this, arguments);\n}\n\nfunction __f4() {\n  return (function() {\n    with({ crypto: require(\"crypto\") }) {\n\nreturn n =\u003e `${n}-${crypto.randomBytes(4).toString(\"hex\")}`;\n\n    }\n  }).apply(undefined, undefined).apply(this, arguments);\n}\n\nfunction __f3() {\n  return (function() {\n    with({ name: \"unify-dev-cfnStackName\", func: __f4 }) {\n\nreturn (inputs) =\u003e Promise.resolve({\n                id: name,\n                outs: { output: func(inputs.input) },\n            });\n\n    }\n  }).apply(undefined, undefined).apply(this, arguments);\n}\n\nfunction __f5() {\n  return (function() {\n    with({ func: __f4 }) {\n\nreturn (id, olds, news) =\u003e Promise.resolve({\n                outs: { output: func(news.input) },\n            });\n\n    }\n  }).apply(undefined, undefined).apply(this, arguments);\n}\n\nfunction __f6() {\n  return (function() {\n    with({  }) {\n\nreturn (id, state) =\u003e Promise.resolve({ id: id, props: state });\n\n    }\n  }).apply(undefined, undefined).apply(this, arguments);\n}\n\nfunction __f7() {\n  return (function() {\n    with({  }) {\n\nreturn (id, props) =\u003e Promise.resolve();\n\n    }\n  }).apply(undefined, undefined).apply(this, arguments);\n}\n\nfunction __f0() {\n  return (function() {\n    with({ provider: __provider }) {\n\nreturn () =\u003e provider;\n\n    }\n  }).apply(undefined, undefined).apply(this, arguments);\n}\n",
+                    "output": "unify-dev-4a037716"
+                },
+                "parent": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster::unify-dev",
+                "provider": "urn:pulumi:prod::aws-kubernetes::pulumi:providers:pulumi-nodejs::default::525661c6-8151-4c47-9c1b-cbc619ba6a18",
+                "propertyDependencies": {
+                    "__provider": null,
+                    "input": null
+                }
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/role:Role::unify-dev-instanceRole-role",
+                "custom": true,
+                "id": "unify-dev-instanceRole-role-a0f50b1",
+                "type": "aws:iam/role:Role",
+                "inputs": {
+                    "assumeRolePolicy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"sts:AssumeRole\"],\"Effect\":\"Allow\",\"Principal\":{\"Service\":[\"ec2.amazonaws.com\"]}}]}",
+                    "forceDetachPolicies": false,
+                    "maxSessionDuration": 3600,
+                    "name": "unify-dev-instanceRole-role-a0f50b1",
+                    "path": "/"
+                },
+                "outputs": {
+                    "arn": "arn:aws:iam::327634617637:role/unify-dev-instanceRole-role-a0f50b1",
+                    "assumeRolePolicy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"ec2.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}",
+                    "createDate": "2019-02-20T13:31:23Z",
+                    "description": "",
+                    "forceDetachPolicies": false,
+                    "id": "unify-dev-instanceRole-role-a0f50b1",
+                    "maxSessionDuration": "3600",
+                    "name": "unify-dev-instanceRole-role-a0f50b1",
+                    "path": "/",
+                    "tags": {},
+                    "uniqueId": "AROAJPOMKDLOCVJCWTG62"
+                },
+                "parent": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole::unify-dev-instanceRole",
+                "provider": "urn:pulumi:prod::aws-kubernetes::pulumi:providers:aws::default::2e3e70b9-84b1-4824-be3b-fd4c62e79ece",
+                "propertyDependencies": {
+                    "assumeRolePolicy": null
+                }
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/role:Role::unify-dev-eksRole-role",
+                "custom": true,
+                "id": "unify-dev-eksRole-role-2d1a65b",
+                "type": "aws:iam/role:Role",
+                "inputs": {
+                    "assumeRolePolicy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"sts:AssumeRole\"],\"Effect\":\"Allow\",\"Principal\":{\"Service\":[\"eks.amazonaws.com\"]}}]}",
+                    "description": "Allows EKS to manage clusters on your behalf.",
+                    "forceDetachPolicies": false,
+                    "maxSessionDuration": 3600,
+                    "name": "unify-dev-eksRole-role-2d1a65b",
+                    "path": "/"
+                },
+                "outputs": {
+                    "arn": "arn:aws:iam::327634617637:role/unify-dev-eksRole-role-2d1a65b",
+                    "assumeRolePolicy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"eks.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}",
+                    "createDate": "2019-02-20T13:31:23Z",
+                    "description": "Allows EKS to manage clusters on your behalf.",
+                    "forceDetachPolicies": false,
+                    "id": "unify-dev-eksRole-role-2d1a65b",
+                    "maxSessionDuration": "3600",
+                    "name": "unify-dev-eksRole-role-2d1a65b",
+                    "path": "/",
+                    "tags": {},
+                    "uniqueId": "AROAIPU3SLOZ27Y4I5GXS"
+                },
+                "parent": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole::unify-dev-eksRole",
+                "provider": "urn:pulumi:prod::aws-kubernetes::pulumi:providers:aws::default::2e3e70b9-84b1-4824-be3b-fd4c62e79ece",
+                "propertyDependencies": {
+                    "assumeRolePolicy": null,
+                    "description": null
+                }
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/rolePolicyAttachment:RolePolicyAttachment::unify-dev-instanceRole-e1b295bd",
+                "custom": true,
+                "id": "unify-dev-instanceRole-role-a0f50b1-20190220133126577000000002",
+                "type": "aws:iam/rolePolicyAttachment:RolePolicyAttachment",
+                "inputs": {
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+                    "role": "unify-dev-instanceRole-role-a0f50b1"
+                },
+                "outputs": {
+                    "id": "unify-dev-instanceRole-role-a0f50b1-20190220133126577000000002",
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+                    "role": "unify-dev-instanceRole-role-a0f50b1"
+                },
+                "parent": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole::unify-dev-instanceRole",
+                "dependencies": [
+                    "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/role:Role::unify-dev-instanceRole-role"
+                ],
+                "provider": "urn:pulumi:prod::aws-kubernetes::pulumi:providers:aws::default::2e3e70b9-84b1-4824-be3b-fd4c62e79ece",
+                "propertyDependencies": {
+                    "policyArn": null,
+                    "role": [
+                        "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/role:Role::unify-dev-instanceRole-role"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/rolePolicyAttachment:RolePolicyAttachment::unify-dev-instanceRole-3eb088f2",
+                "custom": true,
+                "id": "unify-dev-instanceRole-role-a0f50b1-20190220133126861400000003",
+                "type": "aws:iam/rolePolicyAttachment:RolePolicyAttachment",
+                "inputs": {
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
+                    "role": "unify-dev-instanceRole-role-a0f50b1"
+                },
+                "outputs": {
+                    "id": "unify-dev-instanceRole-role-a0f50b1-20190220133126861400000003",
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
+                    "role": "unify-dev-instanceRole-role-a0f50b1"
+                },
+                "parent": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole::unify-dev-instanceRole",
+                "dependencies": [
+                    "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/role:Role::unify-dev-instanceRole-role"
+                ],
+                "provider": "urn:pulumi:prod::aws-kubernetes::pulumi:providers:aws::default::2e3e70b9-84b1-4824-be3b-fd4c62e79ece",
+                "propertyDependencies": {
+                    "policyArn": null,
+                    "role": [
+                        "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/role:Role::unify-dev-instanceRole-role"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/rolePolicyAttachment:RolePolicyAttachment::unify-dev-instanceRole-03516f97",
+                "custom": true,
+                "id": "unify-dev-instanceRole-role-a0f50b1-20190220133126248400000001",
+                "type": "aws:iam/rolePolicyAttachment:RolePolicyAttachment",
+                "inputs": {
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+                    "role": "unify-dev-instanceRole-role-a0f50b1"
+                },
+                "outputs": {
+                    "id": "unify-dev-instanceRole-role-a0f50b1-20190220133126248400000001",
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+                    "role": "unify-dev-instanceRole-role-a0f50b1"
+                },
+                "parent": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole::unify-dev-instanceRole",
+                "dependencies": [
+                    "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/role:Role::unify-dev-instanceRole-role"
+                ],
+                "provider": "urn:pulumi:prod::aws-kubernetes::pulumi:providers:aws::default::2e3e70b9-84b1-4824-be3b-fd4c62e79ece",
+                "propertyDependencies": {
+                    "policyArn": null,
+                    "role": [
+                        "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/role:Role::unify-dev-instanceRole-role"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/rolePolicyAttachment:RolePolicyAttachment::unify-dev-eksRole-90eb1c99",
+                "custom": true,
+                "id": "unify-dev-eksRole-role-2d1a65b-20190220133127238100000004",
+                "type": "aws:iam/rolePolicyAttachment:RolePolicyAttachment",
+                "inputs": {
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEKSServicePolicy",
+                    "role": "unify-dev-eksRole-role-2d1a65b"
+                },
+                "outputs": {
+                    "id": "unify-dev-eksRole-role-2d1a65b-20190220133127238100000004",
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEKSServicePolicy",
+                    "role": "unify-dev-eksRole-role-2d1a65b"
+                },
+                "parent": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole::unify-dev-eksRole",
+                "dependencies": [
+                    "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/role:Role::unify-dev-eksRole-role"
+                ],
+                "provider": "urn:pulumi:prod::aws-kubernetes::pulumi:providers:aws::default::2e3e70b9-84b1-4824-be3b-fd4c62e79ece",
+                "propertyDependencies": {
+                    "policyArn": null,
+                    "role": [
+                        "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/role:Role::unify-dev-eksRole-role"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/rolePolicyAttachment:RolePolicyAttachment::unify-dev-eksRole-4b490823",
+                "custom": true,
+                "id": "unify-dev-eksRole-role-2d1a65b-20190220133127573200000005",
+                "type": "aws:iam/rolePolicyAttachment:RolePolicyAttachment",
+                "inputs": {
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy",
+                    "role": "unify-dev-eksRole-role-2d1a65b"
+                },
+                "outputs": {
+                    "id": "unify-dev-eksRole-role-2d1a65b-20190220133127573200000005",
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy",
+                    "role": "unify-dev-eksRole-role-2d1a65b"
+                },
+                "parent": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole::unify-dev-eksRole",
+                "dependencies": [
+                    "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/role:Role::unify-dev-eksRole-role"
+                ],
+                "provider": "urn:pulumi:prod::aws-kubernetes::pulumi:providers:aws::default::2e3e70b9-84b1-4824-be3b-fd4c62e79ece",
+                "propertyDependencies": {
+                    "policyArn": null,
+                    "role": [
+                        "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/role:Role::unify-dev-eksRole-role"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$aws:iam/instanceProfile:InstanceProfile::unify-dev-instanceProfile",
+                "custom": true,
+                "id": "unify-dev-instanceProfile-01b3119",
+                "type": "aws:iam/instanceProfile:InstanceProfile",
+                "inputs": {
+                    "name": "unify-dev-instanceProfile-01b3119",
+                    "path": "/",
+                    "role": "unify-dev-instanceRole-role-a0f50b1"
+                },
+                "outputs": {
+                    "arn": "arn:aws:iam::327634617637:instance-profile/unify-dev-instanceProfile-01b3119",
+                    "createDate": "2019-02-20T13:31:31Z",
+                    "id": "unify-dev-instanceProfile-01b3119",
+                    "name": "unify-dev-instanceProfile-01b3119",
+                    "path": "/",
+                    "role": "unify-dev-instanceRole-role-a0f50b1",
+                    "roles": [],
+                    "uniqueId": "AIPAINAZHNQILYXYRZDEA"
+                },
+                "parent": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster::unify-dev",
+                "dependencies": [
+                    "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/role:Role::unify-dev-instanceRole-role",
+                    "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/rolePolicyAttachment:RolePolicyAttachment::unify-dev-instanceRole-03516f97",
+                    "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/rolePolicyAttachment:RolePolicyAttachment::unify-dev-instanceRole-e1b295bd",
+                    "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/rolePolicyAttachment:RolePolicyAttachment::unify-dev-instanceRole-3eb088f2"
+                ],
+                "provider": "urn:pulumi:prod::aws-kubernetes::pulumi:providers:aws::default::2e3e70b9-84b1-4824-be3b-fd4c62e79ece",
+                "propertyDependencies": {
+                    "role": [
+                        "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/role:Role::unify-dev-instanceRole-role",
+                        "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/rolePolicyAttachment:RolePolicyAttachment::unify-dev-instanceRole-03516f97",
+                        "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/rolePolicyAttachment:RolePolicyAttachment::unify-dev-instanceRole-e1b295bd",
+                        "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/rolePolicyAttachment:RolePolicyAttachment::unify-dev-instanceRole-3eb088f2"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/vpc:Vpc::vpc",
+                "custom": true,
+                "id": "vpc-061cc43285447aad9",
+                "type": "aws:ec2/vpc:Vpc",
+                "inputs": {
+                    "assignGeneratedIpv6CidrBlock": false,
+                    "cidrBlock": "10.10.0.0/16",
+                    "enableDnsHostnames": true,
+                    "enableDnsSupport": true,
+                    "instanceTenancy": "default",
+                    "tags": {
+                        "Name": "vpc"
+                    }
+                },
+                "outputs": {
+                    "__meta": "{\"schema_version\":\"1\"}",
+                    "arn": "arn:aws:ec2:us-east-1:327634617637:vpc/vpc-061cc43285447aad9",
+                    "assignGeneratedIpv6CidrBlock": false,
+                    "cidrBlock": "10.10.0.0/16",
+                    "defaultNetworkAclId": "acl-041e2acb5997b6a49",
+                    "defaultRouteTableId": "rtb-0e3b2391daaa0ce60",
+                    "defaultSecurityGroupId": "sg-0ee784459b0395306",
+                    "dhcpOptionsId": "dopt-7a7ae71f",
+                    "enableClassiclink": false,
+                    "enableClassiclinkDnsSupport": false,
+                    "enableDnsHostnames": true,
+                    "enableDnsSupport": true,
+                    "id": "vpc-061cc43285447aad9",
+                    "instanceTenancy": "default",
+                    "ipv6AssociationId": "",
+                    "ipv6CidrBlock": "",
+                    "mainRouteTableId": "rtb-0e3b2391daaa0ce60",
+                    "ownerId": "327634617637",
+                    "tags": {
+                        "Name": "vpc"
+                    }
+                },
+                "parent": "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network::vpc",
+                "provider": "urn:pulumi:prod::aws-kubernetes::pulumi:providers:aws::default::2e3e70b9-84b1-4824-be3b-fd4c62e79ece",
+                "propertyDependencies": {
+                    "cidrBlock": null,
+                    "enableDnsHostnames": null,
+                    "enableDnsSupport": null,
+                    "tags": null
+                }
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/subnet:Subnet::vpc-1",
+                "custom": true,
+                "id": "subnet-071fdcbdbb2751a9d",
+                "type": "aws:ec2/subnet:Subnet",
+                "inputs": {
+                    "assignIpv6AddressOnCreation": false,
+                    "availabilityZone": "us-east-1b",
+                    "cidrBlock": "10.10.1.0/24",
+                    "mapPublicIpOnLaunch": true,
+                    "tags": {
+                        "Name": "vpc-1"
+                    },
+                    "vpcId": "vpc-061cc43285447aad9"
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":600000000000},\"schema_version\":\"1\"}",
+                    "arn": "arn:aws:ec2:us-east-1:327634617637:subnet/subnet-071fdcbdbb2751a9d",
+                    "assignIpv6AddressOnCreation": false,
+                    "availabilityZone": "us-east-1b",
+                    "availabilityZoneId": "use1-az2",
+                    "cidrBlock": "10.10.1.0/24",
+                    "id": "subnet-071fdcbdbb2751a9d",
+                    "ipv6CidrBlock": "",
+                    "ipv6CidrBlockAssociationId": "",
+                    "mapPublicIpOnLaunch": true,
+                    "ownerId": "327634617637",
+                    "tags": {
+                        "Name": "vpc-1"
+                    },
+                    "vpcId": "vpc-061cc43285447aad9"
+                },
+                "parent": "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network::vpc",
+                "dependencies": [
+                    "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/vpc:Vpc::vpc"
+                ],
+                "provider": "urn:pulumi:prod::aws-kubernetes::pulumi:providers:aws::default::2e3e70b9-84b1-4824-be3b-fd4c62e79ece",
+                "propertyDependencies": {
+                    "availabilityZone": null,
+                    "cidrBlock": null,
+                    "mapPublicIpOnLaunch": null,
+                    "tags": null,
+                    "vpcId": [
+                        "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/vpc:Vpc::vpc"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/internetGateway:InternetGateway::vpc",
+                "custom": true,
+                "id": "igw-064ba77ac3045ac80",
+                "type": "aws:ec2/internetGateway:InternetGateway",
+                "inputs": {
+                    "tags": {
+                        "Name": "vpc"
+                    },
+                    "vpcId": "vpc-061cc43285447aad9"
+                },
+                "outputs": {
+                    "id": "igw-064ba77ac3045ac80",
+                    "ownerId": "327634617637",
+                    "tags": {
+                        "Name": "vpc"
+                    },
+                    "vpcId": "vpc-061cc43285447aad9"
+                },
+                "parent": "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network::vpc",
+                "dependencies": [
+                    "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/vpc:Vpc::vpc"
+                ],
+                "provider": "urn:pulumi:prod::aws-kubernetes::pulumi:providers:aws::default::2e3e70b9-84b1-4824-be3b-fd4c62e79ece",
+                "propertyDependencies": {
+                    "tags": null,
+                    "vpcId": [
+                        "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/vpc:Vpc::vpc"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/subnet:Subnet::vpc-0",
+                "custom": true,
+                "id": "subnet-07b4f37adaacb2d91",
+                "type": "aws:ec2/subnet:Subnet",
+                "inputs": {
+                    "assignIpv6AddressOnCreation": false,
+                    "availabilityZone": "us-east-1a",
+                    "cidrBlock": "10.10.0.0/24",
+                    "mapPublicIpOnLaunch": true,
+                    "tags": {
+                        "Name": "vpc-0"
+                    },
+                    "vpcId": "vpc-061cc43285447aad9"
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":600000000000},\"schema_version\":\"1\"}",
+                    "arn": "arn:aws:ec2:us-east-1:327634617637:subnet/subnet-07b4f37adaacb2d91",
+                    "assignIpv6AddressOnCreation": false,
+                    "availabilityZone": "us-east-1a",
+                    "availabilityZoneId": "use1-az1",
+                    "cidrBlock": "10.10.0.0/24",
+                    "id": "subnet-07b4f37adaacb2d91",
+                    "ipv6CidrBlock": "",
+                    "ipv6CidrBlockAssociationId": "",
+                    "mapPublicIpOnLaunch": true,
+                    "ownerId": "327634617637",
+                    "tags": {
+                        "Name": "vpc-0"
+                    },
+                    "vpcId": "vpc-061cc43285447aad9"
+                },
+                "parent": "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network::vpc",
+                "dependencies": [
+                    "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/vpc:Vpc::vpc"
+                ],
+                "provider": "urn:pulumi:prod::aws-kubernetes::pulumi:providers:aws::default::2e3e70b9-84b1-4824-be3b-fd4c62e79ece",
+                "propertyDependencies": {
+                    "availabilityZone": null,
+                    "cidrBlock": null,
+                    "mapPublicIpOnLaunch": null,
+                    "tags": null,
+                    "vpcId": [
+                        "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/vpc:Vpc::vpc"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$aws:ec2/securityGroup:SecurityGroup::unify-dev-eksClusterSecurityGroup",
+                "custom": true,
+                "id": "sg-054b97bab2d7821f0",
+                "type": "aws:ec2/securityGroup:SecurityGroup",
+                "inputs": {
+                    "description": "Managed by Pulumi",
+                    "egress": [
+                        {
+                            "cidrBlocks": [
+                                "0.0.0.0/0"
+                            ],
+                            "description": "Allow internet access.",
+                            "fromPort": 0,
+                            "protocol": "-1",
+                            "self": false,
+                            "toPort": 0
+                        }
+                    ],
+                    "name": "unify-dev-eksClusterSecurityGroup-21c890d",
+                    "revokeRulesOnDelete": false,
+                    "vpcId": "vpc-061cc43285447aad9"
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":600000000000},\"schema_version\":\"1\"}",
+                    "arn": "arn:aws:ec2:us-east-1:327634617637:security-group/sg-054b97bab2d7821f0",
+                    "description": "Managed by Pulumi",
+                    "egress": [
+                        {
+                            "cidrBlocks": [
+                                "0.0.0.0/0"
+                            ],
+                            "description": "Allow internet access.",
+                            "fromPort": "0",
+                            "ipv6CidrBlocks": [],
+                            "prefixListIds": [],
+                            "protocol": "-1",
+                            "securityGroups": [],
+                            "self": false,
+                            "toPort": "0"
+                        }
+                    ],
+                    "id": "sg-054b97bab2d7821f0",
+                    "ingress": [],
+                    "name": "unify-dev-eksClusterSecurityGroup-21c890d",
+                    "ownerId": "327634617637",
+                    "revokeRulesOnDelete": false,
+                    "tags": {},
+                    "vpcId": "vpc-061cc43285447aad9"
+                },
+                "parent": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster::unify-dev",
+                "dependencies": [
+                    "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/vpc:Vpc::vpc"
+                ],
+                "provider": "urn:pulumi:prod::aws-kubernetes::pulumi:providers:aws::default::2e3e70b9-84b1-4824-be3b-fd4c62e79ece",
+                "propertyDependencies": {
+                    "description": null,
+                    "egress": null,
+                    "vpcId": [
+                        "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/vpc:Vpc::vpc"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/routeTable:RouteTable::vpc",
+                "custom": true,
+                "id": "rtb-078b2344e26e39804",
+                "type": "aws:ec2/routeTable:RouteTable",
+                "inputs": {
+                    "routes": [
+                        {
+                            "cidrBlock": "0.0.0.0/0",
+                            "gatewayId": "igw-064ba77ac3045ac80"
+                        }
+                    ],
+                    "tags": {
+                        "Name": "vpc"
+                    },
+                    "vpcId": "vpc-061cc43285447aad9"
+                },
+                "outputs": {
+                    "id": "rtb-078b2344e26e39804",
+                    "ownerId": "327634617637",
+                    "propagatingVgws": [],
+                    "routes": [
+                        {
+                            "cidrBlock": "0.0.0.0/0",
+                            "egressOnlyGatewayId": "",
+                            "gatewayId": "igw-064ba77ac3045ac80",
+                            "instanceId": "",
+                            "ipv6CidrBlock": "",
+                            "natGatewayId": "",
+                            "networkInterfaceId": "",
+                            "transitGatewayId": "",
+                            "vpcPeeringConnectionId": ""
+                        }
+                    ],
+                    "tags": {
+                        "Name": "vpc"
+                    },
+                    "vpcId": "vpc-061cc43285447aad9"
+                },
+                "parent": "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network::vpc",
+                "dependencies": [
+                    "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/internetGateway:InternetGateway::vpc",
+                    "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/vpc:Vpc::vpc"
+                ],
+                "provider": "urn:pulumi:prod::aws-kubernetes::pulumi:providers:aws::default::2e3e70b9-84b1-4824-be3b-fd4c62e79ece",
+                "propertyDependencies": {
+                    "routes": [
+                        "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/internetGateway:InternetGateway::vpc"
+                    ],
+                    "tags": null,
+                    "vpcId": [
+                        "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/vpc:Vpc::vpc"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/routeTableAssociation:RouteTableAssociation::vpc-1",
+                "custom": true,
+                "id": "rtbassoc-047863e13d93d4f0e",
+                "type": "aws:ec2/routeTableAssociation:RouteTableAssociation",
+                "inputs": {
+                    "routeTableId": "rtb-078b2344e26e39804",
+                    "subnetId": "subnet-071fdcbdbb2751a9d"
+                },
+                "outputs": {
+                    "id": "rtbassoc-047863e13d93d4f0e",
+                    "routeTableId": "rtb-078b2344e26e39804",
+                    "subnetId": "subnet-071fdcbdbb2751a9d"
+                },
+                "parent": "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network::vpc",
+                "dependencies": [
+                    "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/routeTable:RouteTable::vpc",
+                    "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/subnet:Subnet::vpc-1"
+                ],
+                "provider": "urn:pulumi:prod::aws-kubernetes::pulumi:providers:aws::default::2e3e70b9-84b1-4824-be3b-fd4c62e79ece",
+                "propertyDependencies": {
+                    "routeTableId": [
+                        "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/routeTable:RouteTable::vpc"
+                    ],
+                    "subnetId": [
+                        "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/subnet:Subnet::vpc-1"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/routeTableAssociation:RouteTableAssociation::vpc-0",
+                "custom": true,
+                "id": "rtbassoc-0c43ce155727ab7ff",
+                "type": "aws:ec2/routeTableAssociation:RouteTableAssociation",
+                "inputs": {
+                    "routeTableId": "rtb-078b2344e26e39804",
+                    "subnetId": "subnet-07b4f37adaacb2d91"
+                },
+                "outputs": {
+                    "id": "rtbassoc-0c43ce155727ab7ff",
+                    "routeTableId": "rtb-078b2344e26e39804",
+                    "subnetId": "subnet-07b4f37adaacb2d91"
+                },
+                "parent": "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network::vpc",
+                "dependencies": [
+                    "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/routeTable:RouteTable::vpc",
+                    "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/subnet:Subnet::vpc-0"
+                ],
+                "provider": "urn:pulumi:prod::aws-kubernetes::pulumi:providers:aws::default::2e3e70b9-84b1-4824-be3b-fd4c62e79ece",
+                "propertyDependencies": {
+                    "routeTableId": [
+                        "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/routeTable:RouteTable::vpc"
+                    ],
+                    "subnetId": [
+                        "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/subnet:Subnet::vpc-0"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$aws:eks/cluster:Cluster::unify-dev-eksCluster",
+                "custom": true,
+                "id": "unify-dev-eksCluster-a28b7c0",
+                "type": "aws:eks/cluster:Cluster",
+                "inputs": {
+                    "name": "unify-dev-eksCluster-a28b7c0",
+                    "roleArn": "arn:aws:iam::327634617637:role/unify-dev-eksRole-role-2d1a65b",
+                    "vpcConfig": {
+                        "securityGroupIds": [
+                            "sg-054b97bab2d7821f0"
+                        ],
+                        "subnetIds": [
+                            "subnet-07b4f37adaacb2d91",
+                            "subnet-071fdcbdbb2751a9d"
+                        ]
+                    }
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":900000000000,\"delete\":900000000000,\"update\":3600000000000}}",
+                    "arn": "arn:aws:eks:us-east-1:327634617637:cluster/unify-dev-eksCluster-a28b7c0",
+                    "certificateAuthority": {
+                        "data": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1ESXlNREV6TXpnMU1Gb1hEVEk1TURJeE56RXpNemcxTUZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTG00CnlkNDdYQmFwSFJNQVhLbEQwMFJFYkV3V2U4L3VCYTRqTisvdlFLakovNEd2UVFBSEo2U2ZCeVNmRHZLNGZsNkUKZGhNcXlFSThoQmtmSmN1U04vSjFVU083UCsrbWQvZDVvcEFVNG9MRDBTMHpNNHJPWlZBT25pQ2RQd2ZuYjVKVApad2oyL0RSZDF1K1U3bXkxeGJpdnBaWnZWaEZxRGZTdm5FY1FIZS9KWkErblRyYTFQWW5ZVlh6NVpWaEhVTGt2ClpGaGFmelpaYWRkVGt4c2lBOWhzMHJnT0E1SlBaTGVMN3ZSOU9xUjhYdUtSenA2UUI0YXJoTWpOaXAxejBqc2gKbUxHallYcWRJazdjKzhTYlQwNGEwYlQ3VnkxUE1iQkRCZHhGRHcvMlA0UEpvc05FTWUrc3JpT3IveFM4T1RMdApaVHMrdEdRSHIvaFBsNFJTa1ZNQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFGblpUbkNDc2hIVGRIYzlIaUU0d05Vek5ORE0KYWtySkZTVCtEc1E3OG1HK3FCTHJieWZ4RTA5L0NmMjNpZENEZFovdGdJVHk2NHYvLzRFZmNjWE53M3gxZFJqQwpSRDA2Z3pQSm4zM0RCMDZlSXJCcHVFT21CTjEzK0lrUEhZdnEySjFPR3M1RmZ5ZExxSkxWMTVPQWRkMDhQby90CjAyQ0k0aEtaZlZ4T05tUVUrQjlrVzR6aER3Z3hWTU9KKzhnc1dOcWZQSFdtdER6aGMxNGhPeTIyVnlRa0FMNzcKMTBVQXpINEpiYWJVY1gzWnZ5RVZ2ekk2b1RTZFVJNVEyMmZ3UkhkV0tTemlsaW9DaTFOWGRlaVkyekU1dUVkNAo0dlY3OHVRVDZHbG5kbEpQeWxOL203SXBqelV2aVFnQXN2VmwyZHhQQWVLNnE5V1JraWVwSDhWaVM2ND0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="
+                    },
+                    "createdAt": "2019-02-20 13:31:53 +0000 UTC",
+                    "endpoint": "https://943BC8AF821E34825F209C5E09EC6FDE.yl4.us-east-1.eks.amazonaws.com",
+                    "id": "unify-dev-eksCluster-a28b7c0",
+                    "name": "unify-dev-eksCluster-a28b7c0",
+                    "platformVersion": "eks.1",
+                    "roleArn": "arn:aws:iam::327634617637:role/unify-dev-eksRole-role-2d1a65b",
+                    "version": "1.11",
+                    "vpcConfig": {
+                        "securityGroupIds": [
+                            "sg-054b97bab2d7821f0"
+                        ],
+                        "subnetIds": [
+                            "subnet-07b4f37adaacb2d91",
+                            "subnet-071fdcbdbb2751a9d"
+                        ],
+                        "vpcId": "vpc-061cc43285447aad9"
+                    }
+                },
+                "parent": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster::unify-dev",
+                "dependencies": [
+                    "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/role:Role::unify-dev-eksRole-role",
+                    "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/rolePolicyAttachment:RolePolicyAttachment::unify-dev-eksRole-4b490823",
+                    "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/rolePolicyAttachment:RolePolicyAttachment::unify-dev-eksRole-90eb1c99",
+                    "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$aws:ec2/securityGroup:SecurityGroup::unify-dev-eksClusterSecurityGroup",
+                    "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/subnet:Subnet::vpc-0",
+                    "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/routeTableAssociation:RouteTableAssociation::vpc-0",
+                    "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/subnet:Subnet::vpc-1",
+                    "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/routeTableAssociation:RouteTableAssociation::vpc-1"
+                ],
+                "provider": "urn:pulumi:prod::aws-kubernetes::pulumi:providers:aws::default::2e3e70b9-84b1-4824-be3b-fd4c62e79ece",
+                "propertyDependencies": {
+                    "roleArn": [
+                        "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/role:Role::unify-dev-eksRole-role",
+                        "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/rolePolicyAttachment:RolePolicyAttachment::unify-dev-eksRole-4b490823",
+                        "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$eks:index:ServiceRole$aws:iam/rolePolicyAttachment:RolePolicyAttachment::unify-dev-eksRole-90eb1c99"
+                    ],
+                    "vpcConfig": [
+                        "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$aws:ec2/securityGroup:SecurityGroup::unify-dev-eksClusterSecurityGroup",
+                        "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/subnet:Subnet::vpc-0",
+                        "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/routeTableAssociation:RouteTableAssociation::vpc-0",
+                        "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/subnet:Subnet::vpc-1",
+                        "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/routeTableAssociation:RouteTableAssociation::vpc-1"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$aws:ec2/securityGroup:SecurityGroup::unify-dev-nodeSecurityGroup",
+                "custom": true,
+                "id": "sg-0b7bdaa31996d48e4",
+                "type": "aws:ec2/securityGroup:SecurityGroup",
+                "inputs": {
+                    "description": "Managed by Pulumi",
+                    "egress": [
+                        {
+                            "cidrBlocks": [
+                                "0.0.0.0/0"
+                            ],
+                            "description": "Allow internet access.",
+                            "fromPort": 0,
+                            "protocol": "-1",
+                            "self": false,
+                            "toPort": 0
+                        }
+                    ],
+                    "ingress": [
+                        {
+                            "description": "Allow nodes to communicate with each other",
+                            "fromPort": 0,
+                            "protocol": "-1",
+                            "self": true,
+                            "toPort": 0
+                        },
+                        {
+                            "description": "Allow worker Kubelets and pods to receive communication from the cluster control plane",
+                            "fromPort": 1025,
+                            "protocol": "tcp",
+                            "securityGroups": [
+                                "sg-054b97bab2d7821f0"
+                            ],
+                            "self": false,
+                            "toPort": 65535
+                        },
+                        {
+                            "description": "Allow pods running extension API servers on port 443 to receive communication from cluster control plane",
+                            "fromPort": 443,
+                            "protocol": "tcp",
+                            "securityGroups": [
+                                "sg-054b97bab2d7821f0"
+                            ],
+                            "self": false,
+                            "toPort": 443
+                        }
+                    ],
+                    "name": "unify-dev-nodeSecurityGroup-33b52cd",
+                    "revokeRulesOnDelete": false,
+                    "tags": {
+                        "kubernetes.io/cluster/unify-dev-eksCluster-a28b7c0": "owned"
+                    },
+                    "vpcId": "vpc-061cc43285447aad9"
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":600000000000},\"schema_version\":\"1\"}",
+                    "arn": "arn:aws:ec2:us-east-1:327634617637:security-group/sg-0b7bdaa31996d48e4",
+                    "description": "Managed by Pulumi",
+                    "egress": [
+                        {
+                            "cidrBlocks": [
+                                "0.0.0.0/0"
+                            ],
+                            "description": "Allow internet access.",
+                            "fromPort": "0",
+                            "ipv6CidrBlocks": [],
+                            "prefixListIds": [],
+                            "protocol": "-1",
+                            "securityGroups": [],
+                            "self": false,
+                            "toPort": "0"
+                        }
+                    ],
+                    "id": "sg-0b7bdaa31996d48e4",
+                    "ingress": [
+                        {
+                            "cidrBlocks": [],
+                            "description": "Allow worker Kubelets and pods to receive communication from the cluster control plane",
+                            "fromPort": "1025",
+                            "ipv6CidrBlocks": [],
+                            "prefixListIds": [],
+                            "protocol": "tcp",
+                            "securityGroups": [
+                                "sg-054b97bab2d7821f0"
+                            ],
+                            "self": false,
+                            "toPort": "65535"
+                        },
+                        {
+                            "cidrBlocks": [],
+                            "description": "Allow pods running extension API servers on port 443 to receive communication from cluster control plane",
+                            "fromPort": "443",
+                            "ipv6CidrBlocks": [],
+                            "prefixListIds": [],
+                            "protocol": "tcp",
+                            "securityGroups": [
+                                "sg-054b97bab2d7821f0"
+                            ],
+                            "self": false,
+                            "toPort": "443"
+                        },
+                        {
+                            "cidrBlocks": [],
+                            "description": "Allow nodes to communicate with each other",
+                            "fromPort": "0",
+                            "ipv6CidrBlocks": [],
+                            "prefixListIds": [],
+                            "protocol": "-1",
+                            "securityGroups": [],
+                            "self": true,
+                            "toPort": "0"
+                        }
+                    ],
+                    "name": "unify-dev-nodeSecurityGroup-33b52cd",
+                    "ownerId": "327634617637",
+                    "revokeRulesOnDelete": false,
+                    "tags": {
+                        "kubernetes": {
+                            "io/cluster/unify-dev-eksCluster-a28b7c0": "owned"
+                        }
+                    },
+                    "vpcId": "vpc-061cc43285447aad9"
+                },
+                "parent": "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster::unify-dev",
+                "dependencies": [
+                    "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$aws:ec2/securityGroup:SecurityGroup::unify-dev-eksClusterSecurityGroup",
+                    "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$aws:eks/cluster:Cluster::unify-dev-eksCluster",
+                    "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/vpc:Vpc::vpc"
+                ],
+                "provider": "urn:pulumi:prod::aws-kubernetes::pulumi:providers:aws::default::2e3e70b9-84b1-4824-be3b-fd4c62e79ece",
+                "propertyDependencies": {
+                    "description": null,
+                    "egress": null,
+                    "ingress": [
+                        "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$aws:ec2/securityGroup:SecurityGroup::unify-dev-eksClusterSecurityGroup"
+                    ],
+                    "tags": [
+                        "urn:pulumi:prod::aws-kubernetes::eks:index:Cluster$aws:eks/cluster:Cluster::unify-dev-eksCluster"
+                    ],
+                    "vpcId": [
+                        "urn:pulumi:prod::aws-kubernetes::aws-infra:network:Network$aws:ec2/vpc:Vpc::vpc"
+                    ]
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "kubernetes-javascript",
+    "main": "index.ts",
+    "dependencies": {
+        "@pulumi/aws": "^0.16.8",
+        "@pulumi/docker": "^0.16.4",
+        "@pulumi/kubernetes": "latest",
+        "@pulumi/pulumi": "latest",
+        "@types/node": "^11.9.4"
+    }
+}

@@ -1,0 +1,10 @@
+api/node_modules
+front/node_modules
+api/config/config.js.dist
+front/src/utils/config.js.dist
+front/dist/*.js
+.idea
+.DS_Store
+npm-debug.log
+react-redux-node-authentication/api/src/node_modules/assign-symbols/LICENSE
+infra/node_modules/
