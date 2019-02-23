@@ -1,7 +1,7 @@
 "use strict";
-const k8s = require("@pulumi/kubernetes");
-const pulumi = require("@pulumi/pulumi");
-const aws = require("@pulumi/aws");
+import * as k8s from "@pulumi/kubernetes";
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
 
 const env = pulumi.getStack();
 const infra = new pulumi.StackReference(`nandakishorebhandari/infra/${env}`);
@@ -16,10 +16,11 @@ const loadbalancerZoneId = "Z35SXDOTRQ7X7K";
 const frontendAppName = "pulumi-web";
 const backendAppName = "pulumi-api";
 
-// Create a NGINX Deployment
+
 const frontendAppLabels = { appClass: frontendAppName };
 const backendAppLabels = { appClass: backendAppName };
 
+// Create a Fronted Deployment
 const frontendDeployment = new k8s.apps.v1.Deployment(
   frontendAppName,
   {
@@ -51,6 +52,7 @@ const frontendDeployment = new k8s.apps.v1.Deployment(
   }
 );
 
+// Create a Backend Deployment
 const backendDeployment = new k8s.apps.v1.Deployment(
   backendAppName,
   {
@@ -82,16 +84,16 @@ const backendDeployment = new k8s.apps.v1.Deployment(
   }
 );
 
-// Export the Deployment name
+// Export the Frontend Deployment name
 export const frontendDeploymentName = frontendDeployment.metadata.apply(
   m => m.name
 );
-
+// Export the Backend Deployment name
 export const backendDeploymentName = backendDeployment.metadata.apply(
   m => m.name
 );
 
-// Create a LoadBalancer Service for the NGINX Deployment
+// Create a LoadBalancer Service for the Frontend Deployment
 const frontendService = new k8s.core.v1.Service(
   frontendAppName,
   {
@@ -109,7 +111,7 @@ const frontendService = new k8s.core.v1.Service(
   }
 );
 
-// Create a LoadBalancer Service for the NGINX Deployment
+// Create a LoadBalancer Service for the Backend Deployment
 const backendService = new k8s.core.v1.Service(
   backendAppName,
   {
@@ -127,16 +129,19 @@ const backendService = new k8s.core.v1.Service(
   }
 );
 
-// Export the Service name and public LoadBalancer Endpoint
+// Export the Service name and public LoadBalancer Endpoint for Frontend
 export const frontendServiceName = frontendService.metadata.apply(m => m.name);
 export const frontendServiceHostname = frontendService.status.apply(
   s => s.loadBalancer.ingress[0].hostname
 );
+
+// Export the Service name and public LoadBalancer Endpoint for Backend
 export const backendServiceName = backendService.metadata.apply(m => m.name);
 export const backendServiceHostname = backendService.status.apply(
   s => s.loadBalancer.ingress[0].hostname
 );
 
+// Create a DNS record for Frontend Load Balancer
 const appDomain = new aws.route53.Record(`app.${env}`, {
   name: `app.${env}`,
   aliases: [
@@ -150,6 +155,7 @@ const appDomain = new aws.route53.Record(`app.${env}`, {
   zoneId: aws_route53_zone_primary.zoneId
 });
 
+// Create a DNS record for Backend Load Balancer
 const apiDomain = new aws.route53.Record(`api.${env}`, {
   name: `api.${env}`,
   aliases: [
@@ -162,5 +168,7 @@ const apiDomain = new aws.route53.Record(`api.${env}`, {
   type: "A",
   zoneId: aws_route53_zone_primary.zoneId
 });
+
+// ToDo: Export the DNS Records for Frontend & Backend
 // export const appDomainName = appDomain.status.apply(m => m.fqdn);
 // export const apiDomainName = apiDomain.status.apply(m => m.fqdn);
